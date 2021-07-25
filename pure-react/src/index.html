@@ -18,14 +18,20 @@
         ]);
     }
 
-    const App = () => {
-        return React.createElement('div', {},[
-            React.createElement('h1', {}, 'REACT IS RENDERED!!!'),
-            React.createElement(Person, { name: "Plass", occupation: "Software Engineer" }),
-            React.createElement(Person, { name: "FOLEU", occupation: "Machine Learning Engineer" }),
-            React.createElement(Person, { name: "Rigole", occupation: "Tensorflow Engineer" })
-        ]);
+    class App extends React.Component{
+        render(){
+            return  React.createElement('div', {},[
+                React.createElement('h1', {}, 'REACT IS RENDERED!!!'),
+                React.createElement(Person, { name: "Plass", occupation: "Software Engineer" }),
+                React.createElement(Person, { name: "FOLEU", occupation: "Machine Learning Engineer" }),
+                React.createElement(Person, { name: "Rigole", occupation: "Tensorflow Engineer" })
+            ]);
+        }
     }
+
+    /*const App = () => {
+        return
+    }*/
     ReactDOM.render(
         React.createElement(App),
         document.getElementById('root'));
